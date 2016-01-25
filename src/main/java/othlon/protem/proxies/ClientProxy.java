@@ -1,21 +1,68 @@
 package othlon.protem.proxies;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemModelMesher;
+import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.LoaderState;
+import othlon.protem.ProTem;
+import othlon.protem.ProTemThings;
+
 public class ClientProxy extends CommonProxy{
 
-       public void registerRenderers(){
-          // RenderingRegistry.registerEntityRenderingHandler(CPEntityPiggy.class, new CPPiggyRender());
-          // RenderingRegistry.registerEntityRenderingHandler(CPEntityChook.class, new CPChookRender());
+       //@Override
+       public void registerRenderers(LoaderState.ModState state) {
+              if (state == LoaderState.ModState.PREINITIALIZED) {
+                     //registerEntityRenderers();
+                     //registerRendererVariants();
+              }
+
+              if (state == LoaderState.ModState.INITIALIZED) {
+                    // registerTileEntitySpeacialRenderers();
+                     registerItemRenderers();
+              }
+
+              if (state == LoaderState.ModState.POSTINITIALIZED) {
+
+              }
+       }
+       public void registerItemRenderers() {
+
+              Item itemToRegister = null;
+              ModelResourceLocation modelResourceLocation = null;
+              RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
+
+              ItemModelMesher modelMesher = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
+
+              //othy's attemp at stuff! WOOO
 
 
-          // ClientRegistry.bindTileEntitySpecialRenderer(CPNestTileEntity.class, new CPNestRender());
-          // MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(CPBlocks.nest), WHAT DO YOU WANT HERE!?);
+              modelResourceLocation = new ModelResourceLocation(ProTem.RESOURCE_DOMAIN + "securedBed", "inventory");
+
+              modelMesher.register(ProTemThings.itemSecuredBed, 0, modelResourceLocation);
+
+              System.out.println("PIG TILL I DIE" + modelResourceLocation.toString());
 
 
-          // ClientRegistry.bindTileEntitySpecialRenderer(CPFertileEggTileEntity.class, new CPFirtileEggRender());
-          // MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(CPBlocks.egg),);
+
+              /* new item what what?
+              modelResourceLocation = new ModelResourceLocation(ProTem.RESOURCE_DOMAIN + ProTem.newItem.getName(), "inventory");
+
+              renderItem.getItemModelMesher().register(ProTem.newItem, 0, modelResourceLocation);
+
+              modelMesher.register((ProTem.newItem), 0, modelResourceLocation);
+              */
 
 
-          // ClientRegistry.bindTileEntitySpecialRenderer(CPIncubatorTileEntity.class, new CPIncubatorRender());
-          // MinecraftForge.EVENT_BUS.register(new CPEvents());
+              // Do some general render registrations for objects, not considering meta.
+
+             //really like this design
+             /*   for (int i = 0; i < ArchimedesObjects.registeredItems.size(); i++) {
+                     modelResourceLocation = new ModelResourceLocation(ArchimedesShipMod.RESOURCE_DOMAIN + ArchimedesObjects.registeredItems.keySet().toArray()[i], "inventory");
+                     itemToRegister = (Item) ArchimedesObjects.registeredItems.values().toArray()[i];
+                     modelMesher.register(itemToRegister, 0, modelResourceLocation);
+              }*/
+
        }
 }
