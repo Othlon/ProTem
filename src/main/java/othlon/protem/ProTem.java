@@ -44,7 +44,6 @@ public class ProTem
         newItem = new ProTemItem();
         GameRegistry.registerItem(newItem, newItem.getName());
 
-        proxy.registerRenderers(event.getModState());
 
 
     }
@@ -55,7 +54,8 @@ public class ProTem
     {
 		// recipes
 
-        // item rendering here, preinit causes crashes later????
+        //proxy registeringing
+        proxy.registerRenderers(event.getModState());
 
 
     }
