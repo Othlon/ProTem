@@ -6,7 +6,6 @@ package othlon.protem.items;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import othlon.protem.ProTem;
 
 
@@ -17,13 +16,10 @@ public class ProTemItem extends Item
 
     public ProTemItem()
     {
+        //GameRegistry.registerItem(this, name);
 
-       // setCreativeTab(CreativeTabs.tabMisc);
-
-        GameRegistry.registerItem(this, name);
         setUnlocalizedName(ProTem.MODID + "_" + name);
         setCreativeTab(CreativeTabs.tabMisc);
-
     }
 
     public String getName()
