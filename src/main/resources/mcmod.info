@@ -2,13 +2,13 @@
 {
   "modid": "protem",
   "name": "Pro Tem",
-  "description": "Example placeholder mod.",
+  "description": "Pro Tem – For the time being. A nice StopGap measure when you're a bit short.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Othlon"],
+  "credits": "Cheers to DarkEvilMac for helping me get started with 1.8",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

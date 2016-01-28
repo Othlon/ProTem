@@ -11,12 +11,27 @@ import othlon.protem.items.ItemSecuredBed;
  */
 public class ProTemThings {
 
-    public static Item itemSecuredBed;
+    public static Item mixRed;
+    public static Item ingotRed;
+
+    public static Item mixGlow;
+    public static Item ingotGlow;
+
+    //public static Item itemSecuredBed;
 
     public void preInitThings(FMLPreInitializationEvent event)
     {
-        itemSecuredBed = new ItemSecuredBed().setMaxStackSize(7).setCreativeTab(CreativeTabs.tabMisc);
-        registerItem("securedBed", itemSecuredBed);
+        mixRed = new ItemSecuredBed().setMaxStackSize(7).setCreativeTab(CreativeTabs.tabMisc);
+        registerItem("mixRed", mixRed);
+
+        ingotRed = new ItemSecuredBed().setMaxStackSize(7).setCreativeTab(CreativeTabs.tabMisc);
+        registerItem("ingotRed", ingotRed);
+
+        mixGlow = new ItemSecuredBed().setMaxStackSize(7).setCreativeTab(CreativeTabs.tabMisc);
+        registerItem("mixGlow", mixGlow);
+
+        ingotGlow = new ItemSecuredBed().setMaxStackSize(7).setCreativeTab(CreativeTabs.tabMisc);
+        registerItem("ingotGlow", ingotGlow);
     }
 
     private void registerItem(String id, Item item)

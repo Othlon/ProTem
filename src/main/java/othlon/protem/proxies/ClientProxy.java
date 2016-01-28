@@ -38,11 +38,29 @@ public class ClientProxy extends CommonProxy{
               //othy's attemp at stuff! WOOO
 
 
-              modelResourceLocation = new ModelResourceLocation(ProTem.RESOURCE_DOMAIN + "securedBed", "inventory");
+              modelResourceLocation = new ModelResourceLocation(ProTem.RESOURCE_DOMAIN + "ingotGlow", "inventory");
 
-              modelMesher.register(ProTemThings.itemSecuredBed, 0, modelResourceLocation);
+              modelMesher.register(ProTemThings.ingotGlow, 0, modelResourceLocation);
 
-              System.out.println("PIG TILL I DIE" + modelResourceLocation.toString());
+              modelResourceLocation = new ModelResourceLocation(ProTem.RESOURCE_DOMAIN + "mixGlow", "inventory");
+
+              modelMesher.register(ProTemThings.mixGlow, 0, modelResourceLocation);
+
+              modelResourceLocation = new ModelResourceLocation(ProTem.RESOURCE_DOMAIN + "ingotRed", "inventory");
+
+              modelMesher.register(ProTemThings.ingotRed, 0, modelResourceLocation);
+
+              modelResourceLocation = new ModelResourceLocation(ProTem.RESOURCE_DOMAIN + "mixRed", "inventory");
+
+              modelMesher.register(ProTemThings.mixRed, 0, modelResourceLocation);
+
+
+
+
+
+
+
+              //System.out.println("PIG TILL I DIE" + modelResourceLocation.toString());
 
 
 
