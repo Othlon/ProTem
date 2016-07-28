@@ -2,8 +2,8 @@ package othlon.protem;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import othlon.protem.ProTem;
 
 /**
  * Created by jen on 29/01/2016.
@@ -15,10 +15,10 @@ public final class ProTemTab extends CreativeTabs {
         super(iNo, sName);
     }
 
-    @SideOnly
+    @SideOnly(Side.CLIENT)
     public Item getTabIconItem()
     {
-        return ProTem.things
+        return ProTemThings.mixRed;
     }
 
 }

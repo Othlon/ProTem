@@ -24,8 +24,8 @@ public class ProTemCookBook
         ItemStack redMixStack    = new ItemStack(ProTem.things.mixRed);
         ItemStack redIngotStack  = new ItemStack(ProTem.things.ingotRed);
 
-        ItemStack redStoneStack   = new ItemStack(Items.redstone, 4);
-        ItemStack redBlockStack   = new ItemStack(Blocks.redstone_block, 4);
+        ItemStack redStoneStack   = new ItemStack(Items.redstone, 3);
+        ItemStack redBlockStack   = new ItemStack(Blocks.redstone_block, 3);
 
 
         ItemStack flintStack      = new ItemStack(Items.flint);
@@ -82,7 +82,7 @@ public class ProTemCookBook
 
             //Making: Redstone dust
             GameRegistry.addRecipe(
-                    new ShapelessOreRecipe(redStoneStack, "ingotRedstone"));
+              new ShapelessOreRecipe(redStoneStack, "ingotRed"));
 
             //Making: Redstone Block
             GameRegistry.addRecipe(
@@ -90,7 +90,7 @@ public class ProTemCookBook
                             "xxx",
                             "xxx",
                             "xxx",
-                            'x', "ingotRedstone"));
+                            'x', redIngotStack));
         }
 
 

@@ -1,6 +1,7 @@
-item.Red Ingot.name=Red Ingot
-item.Red Mixture.name=Red Mixture
-item.Glow Ingot.name=Glow Ingot
-item.Glow Mixture.name=Glow Mixture
-tile.Flint Block.name=Block of Flint
-itemGroup.StopGap=StopGap
+item.protem.ingotRed.name=Red Ingot
+item.protem.mixRed.name=Red Mixture
+item.protem.ingotGlow.name=Glow Ingot
+item.protem.mixGlow.name=Glow Mixture
+itemGroup.protem.protemtab =My Mod: Miscellaneous
+tile.protem.blockFlint.name=Block of Flint
+itemGroup.ProTem=ProTem

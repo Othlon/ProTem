@@ -1,10 +1,9 @@
 package othlon.protem;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import othlon.protem.items.ItemSecuredBed;
+import othlon.protem.items.ProTemItem;
 
 /**
  * Created by jen on 25/01/2016.
@@ -21,16 +20,16 @@ public class ProTemThings {
 
     public void preInitThings(FMLPreInitializationEvent event)
     {
-        mixRed = new ItemSecuredBed().setMaxStackSize(7).setCreativeTab(CreativeTabs.tabMisc);
+        mixRed = new ProTemItem().setMaxStackSize(64);
         registerItem("mixRed", mixRed);
 
-        ingotRed = new ItemSecuredBed().setMaxStackSize(7).setCreativeTab(CreativeTabs.tabMisc);
+        ingotRed = new ProTemItem().setMaxStackSize(64);
         registerItem("ingotRed", ingotRed);
 
-        mixGlow = new ItemSecuredBed().setMaxStackSize(7).setCreativeTab(CreativeTabs.tabMisc);
+        mixGlow = new ProTemItem().setMaxStackSize(64);
         registerItem("mixGlow", mixGlow);
 
-        ingotGlow = new ItemSecuredBed().setMaxStackSize(7).setCreativeTab(CreativeTabs.tabMisc);
+        ingotGlow = new ProTemItem().setMaxStackSize(64);
         registerItem("ingotGlow", ingotGlow);
     }
 

@@ -1,6 +1,6 @@
-item.Red Ingot.name=Rotbarren
-item.Red Mixture.name=Rote Mixtur
-item.Glow Ingot.name=Schimmerbarren
-item.Glow Mixture.name=Schimmernde Mixtur
-tile.Flint Block.name=Feuersteinblock
-itemGroup.StopGap=StopGap
+item.protem.ingotRed.name=Rotbarren
+item.protem.mixRed.name=Rote Mixtur
+item.protem.ingotGlow.name=Schimmerbarren
+item.protem.mixGlow.name=Schimmernde Mixtur
+tile.protem.blockFlin.name=Feuersteinblock
+itemGroup.ProTem=ProTem

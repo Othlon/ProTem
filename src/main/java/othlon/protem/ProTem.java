@@ -1,11 +1,11 @@
 package othlon.protem;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import othlon.protem.items.ProTemItem;
 import othlon.protem.proxies.ClientProxy;
 
 @SuppressWarnings("ClassNamePrefixedWithPackageName")
@@ -14,19 +14,18 @@ import othlon.protem.proxies.ClientProxy;
 public class ProTem
 {
     //references
-    public static final String MODID          = "protem";
+    public static final String MODID          = "ProTem";
     public static final String NAME           = "Pro Tem";
     public static final String VERSION        = "1.0";
     public static final String RESOURCE_DOMAIN= "protem:";
 
-    public static ProTemItem newItem;
-
 
     @SidedProxy(clientSide = "othlon.protem.proxies.ClientProxy",
                 serverSide = "othlon.protem.proxies.CommonProxy")
-    public static ClientProxy proxy;
 
-   public static ProTemThings things;
+    public static  ClientProxy   proxy;
+    public static  CreativeTabs  proTemTab = new ProTemTab( CreativeTabs.getNextID() , MODID );
+    public static  ProTemThings  things;
 
     @EventHandler
     public void preinit(FMLPreInitializationEvent event)
@@ -49,7 +48,6 @@ public class ProTem
 
         //proxy registeringing
         proxy.registerRenderers(event.getModState());
-
 
     }
 }
